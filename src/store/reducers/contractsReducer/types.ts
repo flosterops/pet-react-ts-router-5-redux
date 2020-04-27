@@ -1,0 +1,1 @@
+export const FETCH_CONTRACTS = 'FETCH_CONTRACTS';

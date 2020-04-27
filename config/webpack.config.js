@@ -320,7 +320,8 @@ module.exports = function(webpackEnv) {
                 routes: path.resolve('./src/routes'),
                 statics: path.resolve('./src/statics'),
                 models: path.resolve('./src/models'),
-                store: path.resolve('./src/store')
+                store: path.resolve('./src/store'),
+                helpers: path.resolve('./src/helpers')
             },
             plugins: [
                 // Adds support for installing with Plug'n'Play, leading to faster installs and adding

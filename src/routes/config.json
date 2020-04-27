@@ -7,8 +7,14 @@
     },
     {
         "id": "d068af24-3c35-42f5-9664-b7265181f88b",
-        "component": "Different",
+        "component": "Firms",
         "exact": true,
-        "url": "/different"
+        "url": "/firms"
+    },
+    {
+        "id": "271e5382-3aa4-4ae7-88c0-222bc38f221a",
+        "component": "Contracts",
+        "exact": true,
+        "url": "/contracts"
     }
 ]

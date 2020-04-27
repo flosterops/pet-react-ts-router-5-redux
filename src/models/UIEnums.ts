@@ -3,7 +3,8 @@ enum ColorTypes {
     red = 'red',
     black = 'black',
     blue = 'blue',
-    green = 'green'
+    green = 'green',
+    white = 'white'
 }
 
 enum FontSizeTypes {

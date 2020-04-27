@@ -9,7 +9,10 @@
 		color: red;
 	}
 	&__green {
-		green: green;
+		color: green;
+	}
+	&__white {
+		color: white;
 	}
 	&__uppercase {
 		text-transform: uppercase;
@@ -20,7 +23,7 @@
 	&__underline {
 		text-decoration: underline;
 	}
-	&fontSize {
+	&__fontSize {
 		&xs {
 			font-size: 12px;
 		}

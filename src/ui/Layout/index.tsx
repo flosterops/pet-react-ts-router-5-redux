@@ -4,8 +4,8 @@ import {
     JustifyContentTypes,
     AlignItemsTypes,
     DirectionTypes
-} from '../../models/UIEnums';
-import './styles.scss';
+} from 'models/UIEnums';
+import './style.scss';
 
 interface ILayoutProps {
     jc?: JustifyContentTypes;

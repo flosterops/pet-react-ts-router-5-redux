@@ -2,7 +2,18 @@ import * as React from 'react';
 import cx from 'classnames';
 import './style.scss';
 
-const Description = ({
+interface IDescriptionProps {
+    color?: any;
+    margin?: any;
+    fontSize?: any;
+    uppercase?: any;
+    underline?: any;
+    nowrap?: any;
+    className?: any;
+    children?: any;
+}
+
+const Description: React.FC<IDescriptionProps> = ({
     color,
     margin,
     fontSize,
