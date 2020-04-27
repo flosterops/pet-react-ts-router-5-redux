@@ -1,43 +1,46 @@
 .title {
-	&__blue {
-		color: blue;
-	}
-	&__black {
-		color: black;
-	}
-	&__red {
-		color: red;
-	}
-	&__green {
-		green: green;
-	}
-	&__uppercase {
-		text-transform: uppercase;
-	}
-	&__nowrap {
-		white-space: nowrap;
-	}
-	&__underline {
-		text-decoration: underline;
-	}
-	&fontSize {
-		&xs {
-			font-size: 12px;
-		}
-		&_s {
-			font-size: 14px;
-		}
-		&_m {
-			font-size: 16px;
-		}
-		&_l {
-			font-size: 18px;
-		}
-		&_xl {
-			font-size: 24px;
-		}
-		&_xxl {
-			font-size: 32px;
-		}
-	}
+    &__blue {
+        color: blue;
+    }
+    &__black {
+        color: black;
+    }
+    &__red {
+        color: red;
+    }
+    &__green {
+        color: green;
+    }
+    &__white {
+        color: white;
+    }
+    &__uppercase {
+        text-transform: uppercase;
+    }
+    &__nowrap {
+        white-space: nowrap;
+    }
+    &__underline {
+        text-decoration: underline;
+    }
+    &__fontSize {
+        &xs {
+            font-size: 12px;
+        }
+        &_s {
+            font-size: 14px;
+        }
+        &_m {
+            font-size: 16px;
+        }
+        &_l {
+            font-size: 18px;
+        }
+        &_xl {
+            font-size: 24px;
+        }
+        &_xxl {
+            font-size: 32px;
+        }
+    }
 }

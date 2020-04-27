@@ -5,17 +5,18 @@ import {
     FontSizeTypes,
     MarginTypes,
     TagNameTypes
-} from '../../models/UIEnums';
+} from 'models/UIEnums';
+import './style.scss';
 
 interface ITitleProps {
-    color: ColorTypes;
-    margin: MarginTypes;
-    fontSize: FontSizeTypes;
-    uppercase: boolean;
-    underline: boolean;
-    nowrap: boolean;
-    className: string;
-    children: React.ReactChildren;
+    color?: ColorTypes;
+    margin?: MarginTypes;
+    fontSize?: FontSizeTypes;
+    uppercase?: boolean;
+    underline?: boolean;
+    nowrap?: boolean;
+    className?: string;
+    children?: React.ReactChildren | string;
     tagName: TagNameTypes;
 }
 
@@ -38,7 +39,7 @@ const Title: React.FC<ITitleProps> = ({
         underline && 'title__underline',
         className && className
     );
-    return React.createElement(tagName, { classNames: classNames }, children);
+    return React.createElement(tagName, { className: classNames }, children);
 };
 
 export { Title };

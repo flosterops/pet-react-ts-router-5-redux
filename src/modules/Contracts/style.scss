@@ -1,0 +1,17 @@
+.contracts {
+    &__header {
+        background: #0053a7;
+        height: 60px;
+    }
+    &__icon {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        margin-left: 25px;
+        &_back {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}

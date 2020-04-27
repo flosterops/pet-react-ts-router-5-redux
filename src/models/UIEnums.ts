@@ -17,6 +17,16 @@ enum FontSizeTypes {
     xxl = 'xxl'
 }
 
+enum IconTypes {
+    iconBackWhite = 'icon-back-white'
+}
+
+enum ModalTypes {
+    createFirm = 'createFirm',
+    createContract = 'createContract',
+    infoModal = 'infoModal'
+}
+
 enum JustifyContentTypes {
     default = 'flexStart',
     flexStart = 'flexStart',
@@ -61,5 +71,7 @@ export {
     JustifyContentTypes,
     AlignItemsTypes,
     DirectionTypes,
-    MarginTypes
+    MarginTypes,
+    IconTypes,
+    ModalTypes
 };

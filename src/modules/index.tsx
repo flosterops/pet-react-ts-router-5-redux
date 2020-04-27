@@ -1,6 +1,8 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import routes from 'routes/config.json';
+import { closeModal, openModal } from 'store/reducers/modalReducer/actions';
 import { Main } from 'modules/Main';
 import { Firms } from 'modules/Firms';
 import { Contracts } from 'modules/Contracts';
@@ -20,7 +22,7 @@ const getRenderingComponent = (props, component: string) => {
     }
 };
 
-const PageBuilder = () => {
+const PageBuilder = ({ modals }) => {
     return (
         <Column className="page">
             <Router>
@@ -41,4 +43,11 @@ const PageBuilder = () => {
     );
 };
 
-export { PageBuilder };
+const ConnectedPageBuilder = connect(
+    ({ modals }) => {
+        return { modals: modals.modals };
+    },
+    { openModal, closeModal }
+)(PageBuilder);
+
+export { ConnectedPageBuilder as PageBuilder };
