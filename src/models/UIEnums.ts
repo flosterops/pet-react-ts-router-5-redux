@@ -18,7 +18,9 @@ enum FontSizeTypes {
 }
 
 enum IconTypes {
-    iconBackWhite = 'icon-back-white'
+    iconBackWhite = 'icon-back-white',
+    iconCloseBlack = 'icon-close-black',
+    iconMenu = 'icon-menu'
 }
 
 enum ModalTypes {

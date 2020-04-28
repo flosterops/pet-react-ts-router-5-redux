@@ -1,7 +1,7 @@
 .firms {
     &__header {
         background: #0053a7;
-        height: 60px;
+        height: 70px;
     }
     &__icon {
         position: absolute;
@@ -13,5 +13,10 @@
             width: 30px;
             height: 30px;
         }
+    }
+    &__add {
+        position: absolute;
+        margin-right: 25px;
+        right: 0;
     }
 }

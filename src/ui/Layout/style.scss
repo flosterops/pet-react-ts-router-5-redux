@@ -2,6 +2,10 @@
     display: flex;
     width: 100%;
     height: auto;
+    position: relative;
+    &__pointer {
+        cursor: pointer;
+    }
     &__fullHeight {
         height: 100%;
     }

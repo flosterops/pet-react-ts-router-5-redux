@@ -1,0 +1,38 @@
+[
+    {
+        "id": "c2712627-a241-4e37-8785-40d00d419511",
+        "name": "name",
+        "label": "Название фирмы",
+        "type": "text"
+    },
+    {
+        "id": "fdc49719-43c0-42e6-953b-1b93adc9fee9",
+        "name": "numberd",
+        "label": "Номер договора",
+        "type": "number"
+    },
+    {
+        "id": "424d9e20-a1d3-4cfd-8242-4872a7424795",
+        "name": "sumd",
+        "label": "Сумма договора",
+        "type": "number"
+    },
+    {
+        "id": "deef6143-7fab-4dcc-aa0c-dce50faa527a",
+        "name": "datastart",
+        "label": "Срок заключения договора",
+        "type": "date"
+    },
+    {
+        "id": "46fb651a-eaa1-43f0-b32f-20d9ea692869",
+        "name": "datafinish",
+        "label": "Срок завершения договора",
+        "type": "date"
+    },
+    {
+        "id": "3c909bce-4b30-42ee-bc03-6775be14bd9d",
+        "name": "avans",
+        "label": "Аванс",
+        "type": "number"
+    }
+]

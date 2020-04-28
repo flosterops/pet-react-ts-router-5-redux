@@ -3,10 +3,11 @@ import { connect } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import routes from 'routes/config.json';
 import { closeModal, openModal } from 'store/reducers/modalReducer/actions';
+import { Modals } from 'widgets/Modals';
+import { Column } from 'ui/Layout';
 import { Main } from 'modules/Main';
 import { Firms } from 'modules/Firms';
 import { Contracts } from 'modules/Contracts';
-import { Column } from 'ui/Layout';
 import './style.scss';
 
 const getRenderingComponent = (props, component: string) => {
@@ -22,7 +23,7 @@ const getRenderingComponent = (props, component: string) => {
     }
 };
 
-const PageBuilder = ({ modals }) => {
+const PageBuilder = ({ modals, closeModal }) => {
     return (
         <Column className="page">
             <Router>
@@ -39,6 +40,7 @@ const PageBuilder = ({ modals }) => {
                     ))}
                 </Switch>
             </Router>
+            <Modals modals={modals} closeModal={closeModal} />
         </Column>
     );
 };

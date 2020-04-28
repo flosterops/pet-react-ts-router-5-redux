@@ -17,14 +17,6 @@ export const addFirm = (
     name: string,
     address: string,
     shef: string
-) => dispatch => {
-    request(RequestTypes.post, Config('/firms'), { name, address, shef }).then(
-        res => {
-            console.log(res);
-            // dispatch({
-            //     type: FETCH_FIRMS,
-            //     payload: firms
-            // });
-        }
-    );
+) => {
+
 };

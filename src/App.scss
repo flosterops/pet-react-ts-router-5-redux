@@ -7,7 +7,7 @@ $white: #fff;
 $blue: #0053a7;
 $lightblue: #0054a3;
 $lightBlue: #e8eff7;
-$easyBlue: #DCEAF7;
+$easyBlue: #dceaf7;
 $green: #008e40;
 $lightGreen: #0eb61e;
 $darkGreen: #6eb86a;
@@ -33,6 +33,31 @@ $grayBlue: #c3ced8;
 $wetAsphalt: #7b97b0;
 $lightBg: #d6e1f5;
 
+input {
+    height: 40px;
+    width: 100%;
+    border: 1px solid #0054a3;
+    box-sizing: border-box;
+    font-size: 22px;
+    outline: 0;
+    transition: all 0.3s;
+    padding: 0 20px;
+    input[type='search']::-webkit-search-decoration,
+    input[type='search']::-webkit-search-cancel-button,
+    input[type='search']::-webkit-search-results-button,
+    input[type='search']::-webkit-search-results-decoration {
+        display: none;
+    }
+}
+
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    display: flex;
+}
+
 .App {
     text-align: center;
 }
@@ -46,6 +71,15 @@ $lightBg: #d6e1f5;
     .App-logo {
         animation: App-logo-spin infinite 20s linear;
     }
+}
+
+h1,
+h2,
+h3 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
 }
 
 .App-header {
