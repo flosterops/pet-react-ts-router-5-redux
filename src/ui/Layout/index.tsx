@@ -40,7 +40,6 @@ const Layout: React.FC<ILayoutProps> = ({
         className && className
     );
 
-
     return (
         <div className={classNames} {...props}>
             {children}

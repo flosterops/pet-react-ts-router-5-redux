@@ -1,7 +1,7 @@
 enum RequestTypes {
     get = 'get',
     post = 'post',
-    put = ' put',
+    put = 'put',
     delete = 'delete'
 }
 export { RequestTypes };

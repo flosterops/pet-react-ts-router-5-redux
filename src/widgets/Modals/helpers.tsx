@@ -8,7 +8,11 @@ const getModalComponent = (type: ModalTypes, options: any, closeModal) => {
             return null;
         case ModalTypes.createFirm:
             return (
-                <CreateFirmModal key={type} closeModal={closeModal} options={options} />
+                <CreateFirmModal
+                    key={type}
+                    closeModal={closeModal}
+                    options={options}
+                />
             );
         case ModalTypes.infoModal:
             return null;

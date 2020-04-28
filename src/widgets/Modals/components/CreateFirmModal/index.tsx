@@ -41,11 +41,23 @@ const CreateFirmModal = ({ closeModal, options }) => {
     const onAddClick = () => {
         const { name, address, shef } = formFields;
         const { fetchFirms } = options;
-        request(RequestTypes.post, Config('/firms'), {
-            name,
-            address,
-            shef
-        }).then(res => {
+        const params = firmData
+            ? {
+                  name,
+                  address,
+                  shef,
+                  id: firmData.firmId
+              }
+            : {
+                  name,
+                  address,
+                  shef
+              };
+        request(
+            RequestTypes.post,
+            Config(firmData ? '/firm/update' : '/firms'),
+            { ...params }
+        ).then(res => {
             fetchFirms();
             closeModal();
         });

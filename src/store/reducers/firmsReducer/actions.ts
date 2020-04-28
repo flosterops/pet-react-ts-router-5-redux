@@ -13,10 +13,4 @@ export const fetchFirms = () => dispatch => {
     });
 };
 
-export const addFirm = (
-    name: string,
-    address: string,
-    shef: string
-) => {
-
-};
+export const addFirm = (name: string, address: string, shef: string) => {};

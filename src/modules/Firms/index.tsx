@@ -42,7 +42,10 @@ const Firms = ({ fetchFirms, firms, openModal }) => {
     };
 
     const onEditFirm = (firmId: string, firmData) => {
-        openModal(ModalTypes.createFirm, { fetchFirms, firmData });
+        openModal(ModalTypes.createFirm, {
+            fetchFirms,
+            firmData: { ...firmData, firmId }
+        });
     };
 
     const addContract = (firmId: string) => {};
