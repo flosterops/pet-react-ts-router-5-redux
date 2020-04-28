@@ -1,11 +1,17 @@
 import * as React from 'react';
 import { ModalTypes } from 'models/UIEnums';
 import { CreateFirmModal } from 'widgets/Modals/components/CreateFirmModal';
+import { CreateContractModal } from 'widgets/Modals/components/CreateContractModal';
 
 const getModalComponent = (type: ModalTypes, options: any, closeModal) => {
     switch (type) {
         case ModalTypes.createContract:
-            return null;
+            return (
+                <CreateContractModal
+                    options={options}
+                    closeModal={closeModal}
+                />
+            );
         case ModalTypes.createFirm:
             return (
                 <CreateFirmModal

@@ -5,16 +5,17 @@
     }
     &__items {
         position: absolute;
-        width: 100px;
-        left: -110px;
+        width: 140px;
+        left: -150px;
         top: 10px;
         z-index: 20;
         background-color: white;
         &_item {
             box-sizing: border-box;
             border: 1px solid #7b97b0;
+            border-bottom: 0;
             &:last-of-type {
-                border-top: 0;
+                border: 1px solid #7b97b0;
             }
             padding: 5px;
         }

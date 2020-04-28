@@ -7,21 +7,45 @@ import { Table } from 'widgets/Table';
 import { Column } from 'ui/Layout';
 import { Icon } from 'ui/Icon';
 import { Title } from 'ui/Title';
-import { contractsColumns } from 'modules/Contracts/helpers';
+import { getContractsColumns } from './helpers';
 import {
     AlignItemsTypes,
     ColorTypes,
     FontSizeTypes,
     IconTypes,
     JustifyContentTypes,
+    ModalTypes,
     TagNameTypes
 } from 'models/UIEnums';
 import './style.scss';
+import { openModal } from 'store/reducers/modalReducer/actions';
+import { request } from 'helpers/request';
+import { RequestTypes } from 'models/RequestTypes';
+import { Config } from 'helpers/Config';
 
-const Contracts = ({ fetchContracts, contracts }) => {
+const Contracts = ({ fetchContracts, contracts, openModal }) => {
     useEffect(() => {
         fetchContracts();
     }, []);
+
+    const deleteContract = (contractId, firmId) => {
+        request(RequestTypes.post, Config('/contract/delete'), {
+            id: contractId,
+            firmId
+        }).then(res => {
+            fetchContracts();
+        });
+    };
+
+    const editContract = (id, contractData, firmId) => {
+        openModal(ModalTypes.createContract, {
+            fetchContracts,
+            contractData: { ...contractData },
+            contractId: id
+        });
+    };
+
+    const contractsColumns = getContractsColumns(deleteContract, editContract);
 
     return (
         <Column>
@@ -55,7 +79,7 @@ const ConnectedContracts = connect(
     ({ contracts }) => {
         return { contracts: contracts.contracts };
     },
-    { fetchContracts }
+    { fetchContracts, openModal }
 )(Contracts);
 
 export { ConnectedContracts as Contracts };

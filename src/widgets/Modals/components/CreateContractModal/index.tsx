@@ -1,5 +1,10 @@
 import * as React from 'react';
+import moment from 'moment';
 import { useState } from 'react';
+import {
+    getInitialModal,
+    getParamsModel
+} from 'widgets/Modals/components/CreateContractModal/helpers';
 import { Description } from 'ui/Description';
 import { Column, Row } from 'ui/Layout';
 import { Title } from 'ui/Title';
@@ -19,34 +24,37 @@ import config from './config.json';
 import './style.scss';
 
 const CreateContractModal = ({ closeModal, options }) => {
-    const [formFields, setFormFields] = useState({
-        name: '',
-        numberd: '',
-        sumd: '',
-        datastart: '',
-        datafinish: '',
-        avans: ''
-    });
+    const { contractData, contractId, fetchContracts, firmId } = options;
+    const [formFields, setFormFields] = useState(getInitialModal(contractData));
 
     const handleChange = (e: any, name: string) => {
-        setFormFields({ ...formFields, [name]: e.target.value });
+        const { value } = e.target;
+        setFormFields({ ...formFields, [name]: value });
     };
 
     const onAddClick = () => {
-        const { fetchContracts, firmId } = options;
-        request(RequestTypes.post, Config('/contracts'), {
-            ...formFields,
+        const params = getParamsModel(
+            formFields,
+            contractData,
+            contractId,
             firmId
-        }).then(res => {
-            fetchContracts();
+        );
+        request(
+            RequestTypes.post,
+            Config(contractData ? '/contract/update' : '/contracts'),
+            params
+        ).then(res => {
+            if (contractData) {
+                fetchContracts();
+            }
             closeModal();
         });
     };
 
     return (
-        <Column className="modal-crt-firm" jc={JustifyContentTypes.center}>
+        <Column className="modal-crt-contr" jc={JustifyContentTypes.center}>
             <Row
-                className="modal-crt-firm__header"
+                className="modal-crt-contr__header"
                 jc={JustifyContentTypes.spaceBetween}
                 ai={AlignItemsTypes.center}
             >
@@ -56,28 +64,32 @@ const CreateContractModal = ({ closeModal, options }) => {
                     fontSize={FontSizeTypes.l}
                     uppercase
                 >
-                    добавление договора
+                    {`${contractData ? 'изменение' : 'добавление'} договора`}
                 </Title>
                 <Row
                     pointer
                     widthAuto
                     onClick={closeModal}
-                    className="modal-crt-firm__close"
+                    className="modal-crt-contr__close"
                 >
                     <Icon
-                        className="modal-crt-firm__close"
+                        className="modal-crt-contr__close"
                         type={IconTypes.iconCloseBlack}
                     />
                 </Row>
             </Row>
             <Column jc={JustifyContentTypes.spaceAround} fullHeight>
-                {config.map(({ id, name, label }) => {
+                {config.map(({ id, name, label, type }) => {
                     return (
                         <Column jc={JustifyContentTypes.flexStart} key={id}>
-                            <Description className="modal-crt-firm__label">
+                            <Description className="modal-crt-contr__label">
                                 {label}
                             </Description>
-                            <input onChange={e => handleChange(e, name)} />
+                            <input
+                                type={type}
+                                onChange={e => handleChange(e, name)}
+                                value={formFields[name]}
+                            />
                         </Column>
                     );
                 })}
@@ -85,10 +97,13 @@ const CreateContractModal = ({ closeModal, options }) => {
             <Column
                 jc={JustifyContentTypes.flexEnd}
                 ai={AlignItemsTypes.center}
-                className="modal-crt-firm__footer"
+                className="modal-crt-contr__footer"
             >
-                <button className="modal-crt-firm__button" onClick={onAddClick}>
-                    Добавить
+                <button
+                    className="modal-crt-contr__button"
+                    onClick={onAddClick}
+                >
+                    {contractData ? 'Изменить' : 'Добавить'}
                 </button>
             </Column>
         </Column>

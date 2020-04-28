@@ -48,7 +48,12 @@ const Firms = ({ fetchFirms, firms, openModal }) => {
         });
     };
 
-    const addContract = (firmId: string) => {};
+    const addContract = (firmId: string) => {
+        openModal(ModalTypes.createContract, {
+            fetchFirms,
+            firmId
+        });
+    };
 
     const firmsColumns = getFirmColumns(onDeleteFirm, onEditFirm, addContract);
 

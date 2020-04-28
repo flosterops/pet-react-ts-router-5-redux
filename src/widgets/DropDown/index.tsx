@@ -30,9 +30,15 @@ const DropDownItems = ({ onDelete, onEdit, addContract, setIsOpen }) => {
             <Row className="dp-dwn__items_item" pointer onClick={onDeleteClick}>
                 <Description>Удалить</Description>
             </Row>
-            <Row className="dp-dwn__items_item" pointer onClick={onAddContract}>
-                <Description>Добавить договор</Description>
-            </Row>
+            {addContract && (
+                <Row
+                    className="dp-dwn__items_item"
+                    pointer
+                    onClick={onAddContract}
+                >
+                    <Description>Добавить договор</Description>
+                </Row>
+            )}
         </Column>
     );
 };
@@ -40,7 +46,7 @@ const DropDownItems = ({ onDelete, onEdit, addContract, setIsOpen }) => {
 interface IDropDownProps {
     onDelete: (...args) => void;
     onEdit: (...args) => void;
-    addContract: (...args) => void;
+    addContract?: (...args) => void;
 }
 
 class DropDown extends React.Component<IDropDownProps, { isOpen: boolean }> {
