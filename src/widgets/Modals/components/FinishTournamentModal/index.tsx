@@ -41,11 +41,7 @@ const FinishTournamentModal = ({ options, onClose }) => {
                 </Row>
             </Row>
             <Column jc={JustifyContentTypes.spaceAround} fullHeight>
-                <Select
-                    className="modal-crt-team__select"
-                    placeholder="Команда победитель"
-                    onChange={handleChange}
-                >
+                <Select className="modal-crt-team__select" placeholder="Команда победитель" onChange={handleChange}>
                     {teams.map(({ _id, teamTitle }) => (
                         <Option value={_id}>{teamTitle}</Option>
                     ))}

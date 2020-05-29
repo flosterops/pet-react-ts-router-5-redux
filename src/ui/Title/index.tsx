@@ -1,11 +1,6 @@
 import * as React from 'react';
 import cx from 'classnames';
-import {
-    ColorTypes,
-    FontSizeTypes,
-    MarginTypes,
-    TagNameTypes
-} from 'models/UIEnums';
+import { ColorTypes, FontSizeTypes, MarginTypes, TagNameTypes } from 'models/UIEnums';
 import './style.scss';
 
 interface ITitleProps {

@@ -31,11 +31,7 @@ const DropDownItems = ({ onDelete, onEdit, addContract, setIsOpen }) => {
                 <Description>Удалить</Description>
             </Row>
             {addContract && (
-                <Row
-                    className="dp-dwn__items_item"
-                    pointer
-                    onClick={onAddContract}
-                >
+                <Row className="dp-dwn__items_item" pointer onClick={onAddContract}>
                     <Description>Добавить договор</Description>
                 </Row>
             )}
@@ -67,11 +63,7 @@ class DropDown extends React.Component<IDropDownProps, { isOpen: boolean }> {
         const { isOpen } = this.state;
         return (
             <Column widthAuto>
-                <Row
-                    onClick={() => this.setIsOpen(!isOpen)}
-                    className="dp-dwn__icon"
-                    pointer
-                >
+                <Row onClick={() => this.setIsOpen(!isOpen)} className="dp-dwn__icon" pointer>
                     <Icon type={IconTypes.iconMenu} className="dp-dwn__icon" />
                     {isOpen && (
                         <DropDownItems

@@ -1,7 +1,7 @@
 import { LOAD_SESSION, LOGOUT_USER, SET_USER } from 'store/reducers/appReducer/types';
 
 const initialState = {
-    appUser: null,
+    appUser: null
 };
 
 export default function(state = initialState, action) {

@@ -18,10 +18,7 @@ interface IIconProps {
     className?: string;
 }
 
-const Icon: React.FC<IIconProps> = ({
-    type,
-    className
-}): React.ReactElement => {
+const Icon: React.FC<IIconProps> = ({ type, className }): React.ReactElement => {
     return <img alt={type} src={ICON_FACTORY[type]} className={className} />;
 };
 

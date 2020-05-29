@@ -9,14 +9,8 @@ const Modals = ({ modals, closeModal }) => {
         return null;
     }
     return (
-        <Column
-            className="modal"
-            jc={JustifyContentTypes.center}
-            ai={AlignItemsTypes.center}
-        >
-            {modals.map(({ type, options }) =>
-                getModalComponent(type, options, closeModal)
-            )}
+        <Column className="modal" jc={JustifyContentTypes.center} ai={AlignItemsTypes.center}>
+            {modals.map(({ type, options }) => getModalComponent(type, options, closeModal))}
         </Column>
     );
 };

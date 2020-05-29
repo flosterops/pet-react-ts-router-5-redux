@@ -25,9 +25,7 @@ const Description: React.FC<IDescriptionProps> = ({
 }) => {
     const classNames = cx(
         color ? `description__${color}` : 'description__black',
-        fontSize
-            ? `description__fontSize_${fontSize}`
-            : `description__fontSize_s`,
+        fontSize ? `description__fontSize_${fontSize}` : `description__fontSize_s`,
         uppercase && 'description__uppercase',
         nowrap && 'description__nowrap',
         underline && 'description__underline',
