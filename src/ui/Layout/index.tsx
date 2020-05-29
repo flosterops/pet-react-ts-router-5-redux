@@ -1,10 +1,6 @@
 import * as React from 'react';
 import cx from 'classnames';
-import {
-    JustifyContentTypes,
-    AlignItemsTypes,
-    DirectionTypes
-} from 'models/UIEnums';
+import { JustifyContentTypes, AlignItemsTypes, DirectionTypes } from 'models/UIEnums';
 import './style.scss';
 
 interface ILayoutProps {

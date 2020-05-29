@@ -33,8 +33,15 @@ $grayBlue: #c3ced8;
 $wetAsphalt: #7b97b0;
 $lightBg: #d6e1f5;
 
+.ant-input {
+    height: 30px;
+}
+
+textarea {
+    resize: none;
+}
+
 input {
-    height: 40px;
     width: 100%;
     border: 1px solid #0054a3;
     box-sizing: border-box;

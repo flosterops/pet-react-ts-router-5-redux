@@ -1,0 +1,32 @@
+[
+    {
+        "id": "e14c9386-7689-451f-99ce-e9ac2ce620e8",
+        "type": "input",
+        "field": "tournamentTitle",
+        "label": "Название турнира"
+    },
+    {
+        "id": "4b9fc4ea-4ff7-4684-80ff-d4b50d609fee",
+        "type": "textarea",
+        "field": "tournamentDescription",
+        "label": "Описание турнира"
+    },
+    {
+        "id": "6f80357e-7a28-4357-a180-d67bec3bf9be",
+        "type": "number",
+        "field": "tournamentPrice",
+        "label": "Призовой фонд"
+    },
+    {
+        "id": "5ceed9e3-4239-44b2-9948-3017bb0fc518",
+        "type": "date",
+        "field": "startDate",
+        "label": "Дата начала турнира"
+    },
+    {
+        "id": "03c85743-e709-44cf-b4f2-68b09c7d3a62",
+        "type": "date",
+        "field": "finishDate",
+        "label": "Дата окончания турнира"
+    }
+]

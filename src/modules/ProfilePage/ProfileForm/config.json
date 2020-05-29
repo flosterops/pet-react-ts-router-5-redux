@@ -1,0 +1,30 @@
+[
+    {
+        "id": "267f29fc-fde3-4f83-a593-1cf95f6fe3cc",
+        "type": "text",
+        "field": "name",
+        "placeholder": "Введите имя",
+        "label": "Имя"
+    },
+    {
+        "id": "c763a60e-c291-4291-94fe-a38339e0a45e",
+        "type": "text",
+        "field": "surname",
+        "placeholder": "Введите фамилию",
+        "label": "Фамилия"
+    },
+    {
+        "id": "4a5ba9af-e8d1-46a0-ba97-84df1168aca3",
+        "type": "text",
+        "field": "patronymic",
+        "placeholder": "Введите отчество",
+        "label": "Отчество"
+    },
+    {
+        "id": "47ff2875-6f53-4c84-b6be-6638f0c79e60",
+        "type": "number",
+        "field": "phone",
+        "placeholder": "Введите номер телефона",
+        "label": "Номер телефона"
+    }
+]

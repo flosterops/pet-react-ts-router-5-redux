@@ -1,0 +1,16 @@
+{
+    "addPanel": [
+        {
+            "id": "1f8907a8-fcc0-439e-a24a-56314b4f5c0e",
+            "type": "createTournamentModal",
+            "text": "Создать турнир"
+        }
+    ],
+    "requestPanel": [
+        {
+            "id": "6f76e0e6-8495-4fda-97a0-221989903bf7",
+            "url": "/tournamentRequests",
+            "text": "Заявки на участие в турнирах"
+        }
+    ]
+}

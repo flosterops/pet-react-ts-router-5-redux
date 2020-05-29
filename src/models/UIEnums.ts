@@ -24,9 +24,11 @@ enum IconTypes {
 }
 
 enum ModalTypes {
-    createFirm = 'createFirm',
-    createContract = 'createContract',
-    infoModal = 'infoModal'
+    infoModal = 'infoModal',
+    createTeamModal = 'createTeamModal',
+    createTournamentModal = 'createTournamentModal',
+    createDancerModal = 'createDancerModal',
+    finishTournament = 'finishTournament'
 }
 
 enum JustifyContentTypes {

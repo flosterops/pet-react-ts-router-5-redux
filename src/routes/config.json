@@ -6,15 +6,57 @@
         "url": "/"
     },
     {
-        "id": "d068af24-3c35-42f5-9664-b7265181f88b",
-        "component": "Firms",
+        "id": "dc017a96-4c09-448b-8267-37cea22eca75",
+        "component": "TeamPage",
         "exact": true,
-        "url": "/firms"
+        "url": "/team/:id"
     },
     {
-        "id": "271e5382-3aa4-4ae7-88c0-222bc38f221a",
-        "component": "Contracts",
+        "id": "4074d204-af63-420b-b461-1543bb045f5b",
+        "component": "TeamPage",
         "exact": true,
-        "url": "/contracts"
+        "url": "/team/:id"
+    },
+    {
+        "id": "01f83062-2b24-4a5c-99e7-d8a55c8db676",
+        "component": "ProfilePage",
+        "exact": true,
+        "url": "/profile/:id"
+    },
+    {
+        "id": "7691bdf3-b318-4720-9477-cb40e30c537f",
+        "component": "TournamentPage",
+        "exact": true,
+        "url": "/tournament/:id"
+    },
+    {
+        "id": "72e4ce50-afbb-431a-ba92-c9c309460d66",
+        "component": "AuthPage",
+        "exact": true,
+        "url": "/auth"
+    },
+    {
+        "id": "5c4782b3-c24a-4fec-be1d-6d79ab9a09c2",
+        "component": "AllTournamentsPage",
+        "exact": true,
+        "url": "/tournaments"
+    },
+    {
+        "id": "95d8c5a9-2784-4b0a-8329-3aa3a0b9fb96",
+        "component": "AllTeamsPage",
+        "exact": true,
+        "url": "/teams"
+    },
+    {
+        "id": "05d65f38-de28-4b5c-a850-2929999716a9",
+        "component": "TeamRequestsPage",
+        "exact": true,
+        "url": "/teamRequests"
+    },
+    {
+        "id": "067c973a-3b79-44d6-a19d-8ab8a2dd1a72",
+        "component": "TournamentRequestsPage",
+        "exact": true,
+        "url": "/tournamentRequests"
     }
 ]

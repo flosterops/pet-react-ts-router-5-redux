@@ -1,0 +1,20 @@
+[
+    {
+        "id": "7667386f-552a-44d3-96bb-546b6355af86",
+        "type": "input",
+        "field": "teamTitle",
+        "label": "Название команды"
+    },
+    {
+        "id": "96119aee-e52e-4341-bef9-a633a0e9b7b0",
+        "type": "textarea",
+        "field": "teamDescription",
+        "label": "Описание команды"
+    },
+    {
+        "id": "ccfe0ddf-a568-47b2-963f-ff4227d4e9f8",
+        "type": "select",
+        "field": "teamMembers",
+        "label": "Участники"
+    }
+]

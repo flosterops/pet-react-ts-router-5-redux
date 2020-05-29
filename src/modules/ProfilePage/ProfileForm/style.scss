@@ -1,0 +1,19 @@
+.prf-form {
+    width: 450px;
+    padding: 15px 30px;
+    &__label {
+        margin: 0 5px 5px;
+        p {
+            margin-right: 5px;
+        }
+    }
+    &__submit {
+        padding: 0 10px;
+    }
+    &__input {
+        margin-bottom: 15px;
+        &_number {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.trn-page {
+    padding: 20px 60px;
+    &__header {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ccc;
+    }
+    &__title {
+        margin-right: 5px;
+    }
+    &__price {
+        margin-left: 5px;
+        font-weight: 500;
+    }
+    &__info {
+        width: 650px;
+        border-right: 1px solid #ccc;
+        padding: 0 15px 0 0;
+    }
+}

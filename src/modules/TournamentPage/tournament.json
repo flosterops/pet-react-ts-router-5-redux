@@ -1,0 +1,10 @@
+{
+    "id": "a3d510d2-a665-4056-916c-a7766a8b50bb",
+    "name": "TournamentName",
+    "price": 12000,
+    "dateStart": "",
+    "dateFinish": "",
+    "teams": [],
+    "info": "Tournament info.",
+    "status": 1
+}

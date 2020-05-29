@@ -3,6 +3,7 @@
     width: 100%;
     height: auto;
     position: relative;
+    box-sizing: border-box;
     &__pointer {
         cursor: pointer;
     }

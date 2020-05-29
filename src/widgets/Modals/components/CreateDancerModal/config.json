@@ -1,0 +1,30 @@
+[
+    {
+        "id": "f9b7e67a-6879-4398-9261-a95e87ace71b",
+        "type": "text",
+        "field": "name",
+        "label": "Имя танцора",
+        "placeholder": "Введите имя"
+    },
+    {
+        "id": "85072145-5ceb-4ca3-b503-59807cfbc68d",
+        "type": "text",
+        "field": "surname",
+        "label": "Фамилия танцора",
+        "placeholder": "Введите фамилию"
+    },
+    {
+        "id": "79e846c7-252e-4b8d-96a3-d5bc5b835ee1",
+        "type": "text",
+        "field": "patronymic",
+        "label": "Отчество танцора",
+        "placeholder": "Введите отчество"
+    },
+    {
+        "id": "03e90501-2741-48c7-bd5a-d10e54a8f849",
+        "type": "select",
+        "field": "patronymic",
+        "label": "Выберите команду для танцора",
+        "placeholder": "Список команд"
+    }
+]

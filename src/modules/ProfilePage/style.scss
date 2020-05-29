@@ -1,0 +1,14 @@
+.profile-page {
+    padding: 20px 60px;
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__photo {
+        width: 150px;
+        border-right: 1px solid #ccc;
+        padding: 0 15px;
+        &_item {
+            margin-bottom: 10px;
+        }
+    }
+}

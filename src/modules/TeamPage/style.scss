@@ -1,0 +1,10 @@
+.team-page {
+    padding: 20px 60px;
+    &__title {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ccc;
+    }
+    &__info {
+        margin-right: 60px;
+    }
+}

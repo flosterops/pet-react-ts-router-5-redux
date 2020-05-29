@@ -1,22 +1,17 @@
-import {
-    AppReducerActionTypes,
-    CHANGE_SELECTED_TAB,
-    IAppReducerModel
-} from 'store/reducers/appReducer/types';
+import { LOAD_SESSION, LOGOUT_USER, SET_USER } from 'store/reducers/appReducer/types';
 
-const initialState: IAppReducerModel = {
-    selectedTabId: ''
+const initialState = {
+    appUser: null,
 };
 
-export default function(
-    state: IAppReducerModel = initialState,
-    action: AppReducerActionTypes
-): IAppReducerModel {
+export default function(state = initialState, action) {
     switch (action.type) {
-        case CHANGE_SELECTED_TAB:
+        case SET_USER:
+        case LOGOUT_USER:
+        case LOAD_SESSION:
             return {
                 ...state,
-                selectedTabId: action.payload
+                appUser: action.payload
             };
         default:
             return {
